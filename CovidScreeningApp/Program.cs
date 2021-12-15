@@ -13,7 +13,7 @@ namespace CovidScreeningApp
         {   
             using var webDriver = new ChromeDriver();
             await ExecuteActionAndPause(() => webDriver.Navigate().GoToUrl(@"https://covid-19.ontario.ca/school-screening/"));
-            await ExecuteActionAndPause(() => webDriver.FindElement(By.XPath(@"//button")).Click());
+            await ExecuteActionAndPause(() => webDriver.FindElement(By.XPath(@"//button[text()='Start school screening']")).Click());
             await ExecuteActionAndPause(() => webDriver.FindElement(By.Id("guardian")).Click());
             await ExecuteActionAndPause(() => webDriver.FindElement(By.XPath(@"//button[text()='Continue']")).Click());
             await ExecuteActionAndPause(() => webDriver.FindElement(By.XPath(@"//button[text()='No']")).Click());
