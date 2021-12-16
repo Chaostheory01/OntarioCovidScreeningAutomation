@@ -24,6 +24,7 @@ namespace CovidScreeningApp
             await ExecuteActionAndPause(() => webDriver.FindElement(By.XPath(@"//button[text()='Continue']")).Click());
             await ExecuteActionAndPause(() => webDriver.FindElement(By.XPath(@"//button[text()='No']")).Click());
             await ExecuteActionAndPause(() => webDriver.FindElement(By.XPath(@"//button[text()='No']")).Click());
+            await ExecuteActionAndPause(() => webDriver.FindElement(By.XPath(@"//button[text()='No']")).Click());
             await ExecuteActionAndPause(() => webDriver.FindElement(By.XPath(@"//div[text()='Download result (PDF)']")).Click());
             await Task.Delay(TimeSpan.FromSeconds(10)); // wait for download to complete
         }
